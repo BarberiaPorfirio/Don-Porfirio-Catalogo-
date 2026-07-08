@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Don Porfirio - Estilo y Tradición</title>
+    
+    <link rel="icon" tyxpe="image/x-icon" href="images/favicon.ico?v=1.1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>
+                    <span class="barber-emoji">💈</span>
+                    <span class="site-title">Don Porfirio</span>
+                    <span class="barber-emoji">💈</span>
+                </h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#catalogo" onclick="mostrarMensajeInicial()">Catálogo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-logo-container">
+                <img src="images/logo.png" alt="Escuela de Barbería Don Porfirio" class="hero-logo">
+            </div>
+            <div class="hero-content">
+                <h2>Bienvenido a Nuestro Salón</h2>
+                <p>Descubre nuestros estilos premium diseñados especialmente para ti</p>
+                <div class="frase-motivacional">
+                    <p>"De 0 a profesional con nuestro método 360°"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-categorias" id="catalogo">
+        <div class="container">
+            <div class="categorias-grid">
+                
+                <button class="cat-item" onclick="filtrarCategoria('Clásicos')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imgen boton 1.png" alt="Clásicos">
+                    </div>
+                    <span>CLÁSICOS</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Modernos')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 2.png" alt="Modernos">
+                    </div>
+                    <span>MODERNOS</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Urbanos')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 5.png" alt="Urbanos">
+                    </div>
+                    <span>URBANOS</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Barba')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 3.png" alt="Barba">
+                    </div>
+                    <span>BARBA</span>
+                </button>
+
+                <button class="cat-item" onclick="filtrarCategoria('Diseño y Color')">
+                    <div class="cat-icon-wrapper">
+                        <img src="images/imagen boton 4.png" alt="Diseño y Color">
+                    </div>
+                    <span>DISEÑO & COLOR</span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="separador-premium">
+        <div class="linea-dorada"></div>
+        <i class="fas fa-cut nav-scissors"></i>
+        <div class="linea-dorada"></div>
+    </div>
+
+    <section class="catalogo-dinamico">
+        <div class="container" id="contenedorCortes">
+            </div>
+    </section>
+
+    <div id="modalVariantes" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitulo">Variantes</h3>
+            <div id="contenedorVariantes" class="variantes-grid"></div>
+        </div>
+    </div>
+
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>Contacto y Redes Sociales</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Teléfonos</h3>
+                    <p>773 100 8728</p>
+                </div>
+                
+                <div class="info-item">
+                    <a href="https://wa.me/527731928076" target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp whatsapp-icon"></i>
+                        <h3>WhatsApp</h3>
+                        <p>773 192 8076</p>
+                    </a>
+                </div>
+                
+                <div class="info-item">
+                    <a href="https://www.facebook.com/profile.php?id=100094754708657" target="_blank" class="social-link">
+                        <i class="fab fa-facebook facebook-icon"></i>
+                        <h3>Facebook</h3>
+                        <p>porfirioBarber</p>
+                    </a>
+                </div>
+                
+                <div class="info-item">
+                    <a href="https://www.instagram.com/don_porfirio_100" target="_blank" class="social-link">
+                        <i class="fab fa-instagram instagram-icon"></i>
+                        <h3>Instagram</h3>
+                        <p>@don_porfirio_100</p>
+                    </a>
+                </div>
+                
+                <div class="info-item">
+                    <a href="https://www.tiktok.com/@porfirio.barber" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok tiktok-icon"></i>
+                        <h3>TikTok</h3>
+                        <p>porfirio Barber</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Don Porfirio - Estilo y Tradición</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
